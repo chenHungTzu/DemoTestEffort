@@ -37,6 +37,7 @@ namespace DemoTestEffort.api.Controllers
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
+        [HttpGet("DivisionToWrite_Changed/{number}")]
         public IActionResult DivisionToWrite_Changed(int number)
         {
             try

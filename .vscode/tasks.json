@@ -36,7 +36,19 @@
             "dependsOn": [
                 "docker-build: debug"
             ],
-            "dockerRun": {},
+            "dockerRun": {
+                "env": {
+                    "ASPNETCORE_ENVIRONMENT": "Development"
+                },
+                "ports": [
+                    {
+                        "containerPort": 80,
+                        "hostPort": 55003,
+                        "protocol": "tcp"
+                    }                
+                ],
+                
+            },
             "netCore": {
                 "appProject": "${workspaceFolder}/api/api.csproj",
                 "enableDebugging": true
